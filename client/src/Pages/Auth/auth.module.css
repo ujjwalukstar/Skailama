@@ -1,0 +1,180 @@
+.container {
+  display: flex;
+  overflow-x: hidden;
+}
+
+.container .content {
+  background: linear-gradient(231.62deg, #c37eff -26.53%, #3a0b63 117.16%);
+  width: calc(60vw - 2rem);
+  height: 100vh;
+  position: relative;
+}
+
+.waveImg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: popUpAnimation 0.5s ease-in both;
+}
+
+.LogoWhite {
+  width: 52.33px;
+  height: 52.33px;
+}
+
+.LogoWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.LogoWrapper h3 {
+  font-size: 1.5rem;
+}
+
+.contentWrapper {
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 6vw;
+  left: 4vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transform: translateX(-60rem);
+  animation: contentAnimation 1.5s ease-in both;
+}
+
+.contentWrapper h5 {
+  font-family: "Circular Std", sans-serif;
+  font-size: clamp(0.5rem, 6vw, 90.41px);
+  font-weight: 300;
+}
+
+.logoText {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem !important;
+  font-weight: 300;
+  line-height: 40.17px;
+  text-align: left;
+}
+
+.subText {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(0.8rem, 3vw, 60px);
+  font-weight: 300;
+  line-height: 40.17px;
+  text-align: left;
+}
+
+.logo {
+  width: 100.36px;
+  height: 96.2px;
+}
+
+section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  height: 100vh;
+  opacity: 0;
+  animation: popUpAnimation 1s ease-in both;
+}
+
+section h4 {
+  font-family: Roboto;
+  font-size: 44.72px;
+  font-weight: 300;
+  line-height: 48.79px;
+  text-align: center;
+  color: rgba(126, 34, 206, 1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0px 3rem;
+  gap: 1rem;
+  /* max-width: 80vw; */
+}
+
+form input {
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 7px;
+  border: 1px solid rgba(219, 219, 219, 1);
+  outline: none;
+}
+
+form button {
+  width: 100%;
+  padding: 1rem;
+  background-color: rgba(126, 34, 206, 1);
+  color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-radius: 7px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+form b {
+  font-family: Roboto;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 20.37px;
+  cursor: pointer;
+  color: rgba(0, 90, 213, 1);
+}
+
+form a {
+  all: unset;
+}
+
+form p {
+  color: rgba(60, 60, 60, 1);
+}
+
+.error {
+  border-color: red;
+  color: red;
+}
+
+.error::placeholder {
+  color: red;
+}
+
+@keyframes contentAnimation {
+  to {
+    transform: translate(0);
+  }
+}
+
+@keyframes popUpAnimation {
+  to {
+    opacity: 100%;
+  }
+}
+
+
+
+@media screen and (max-width: 850px) {
+  .container .content {
+    width: calc(50vw - 2rem);
+  }
+
+  .contentWrapper {
+    top: 20vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container .content {
+    display: none;
+  }
+}
